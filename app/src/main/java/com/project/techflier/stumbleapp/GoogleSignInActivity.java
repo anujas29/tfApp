@@ -65,22 +65,19 @@ public class GoogleSignInActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                        System.out.println("========================= FBsignIn onsuccess =========================================="+loginResult);
+
                         handleFacebookAccessToken(loginResult.getAccessToken());
                     }
 
                     @Override
                     public void onCancel() {
                         Log.d(TAG, "facebook:onCancel");
-                        System.out.println("========================= FBsignIn cancle ==========================================");
-                        // ...
+
                     }
 
                     @Override
                     public void onError(FacebookException error) {
                         Log.d(TAG, "facebook:onError", error);
-                        System.out.println("========================= FBsignIn error ==========================================");
-                        // ...
                     }
                 });
 
@@ -112,40 +109,10 @@ public class GoogleSignInActivity extends AppCompatActivity {
 
 
 
-    public void FBsignIn()
-    {
-        System.out.println("========================= FBsignIn --------------");
 
-        FBloginButton.setReadPermissions("email", "public_profile");
-        FBloginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                System.out.println("========================= FBsignIn onsuccess =========================================="+loginResult);
-                handleFacebookAccessToken(loginResult.getAccessToken());
-            }
-
-            @Override
-            public void onCancel() {
-                Log.d(TAG, "facebook:onCancel");
-                System.out.println("========================= FBsignIn cancle ==========================================");
-                // ...
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-                Log.d(TAG, "facebook:onError", error);
-                System.out.println("========================= FBsignIn error ==========================================");
-                // ...
-            }
-        });
-
-    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        System.out.println("========================= onActivityResult  ==========================================");
 
         // Pass the activity result back to the Facebook SDK
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
@@ -154,14 +121,12 @@ public class GoogleSignInActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        System.out.println("========================= onStart ==========================================");
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
 
     private void updateUI(FirebaseUser user) {
-        System.out.println("========================= updateUI  =========================================="+user);
         Toast.makeText(GoogleSignInActivity.this,"You are logged in ",Toast.LENGTH_LONG);
         if (user != null) {
 
