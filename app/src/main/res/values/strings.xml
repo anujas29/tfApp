@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TfApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_share">Shares</string>
+    <string name="nav_article">Articles</string>
+    <string name="nav_mediabyte">Mediabytes</string>
+    <string name="nav_activity">Activity</string>
+    <string name="nav_likes">My Likes</string>
+    <string name="nav_list">Lists</string>
+    <string name="nav_techflier">TechFliers</string>
+    <string name="nav_submmit">Submit Content</string>
+
+    <string name="Category">Add Category</string>
+    <string name="nav_blockchain">Blockchain</string>
+    <string name="nav_crypt">Cryptocurrency</string>
+
+    <string name="nav_settings">Settings</string>
+    <string name="nav_signout">Logout</string>
+
+
+    <string name="facebook_app_id">1673556692710858</string>
+    <string name="fb_login_protocol_scheme">fb1673556692710858</string>
+
+</resources>
